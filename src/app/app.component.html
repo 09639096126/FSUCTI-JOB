@@ -1,0 +1,22 @@
+
+<nav class="navbar navbar-light bg light">
+  <div class="container-fluid">
+    <a href="" class="navbar-brand">FSUCTI JOB PORTAL</a>
+    
+    <form  class="d-flex">
+      
+      @if (this.userData()) {
+        <button (click)="signOut()" class="btn btn-outline-success ne-2" type="button">Logout</button>
+        <p class="text-black my-2">{{this.userData()}}</p>
+      } @else {
+        <span>{{ "" }}</span>
+      }
+      
+    
+ <!-- <form  class="d-flex">
+  <p class="text-black my-2">{{this.userData()}}</p>
+  <button (click) = "signOut()"class="btn btn-outline-success ne-2" type="button">Logout</button>-->
+ </form>
+  </div>
+</nav>
+<router-outlet></router-outlet> 
